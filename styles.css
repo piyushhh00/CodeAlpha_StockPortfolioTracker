@@ -1,0 +1,504 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #2a52be;
+    --secondary-color: #4169e1;
+    --accent-color: #6495ed;
+    --text-color: #333;
+    --light-text: #777;
+    --background-color: #f8f9fa;
+    --card-background: #fff;
+    --positive-color: #28a745;
+    --negative-color: #dc3545;
+    --border-color: #e0e0e0;
+    --hover-color: #f0f0f0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--card-background);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a.active {
+    color: var(--primary-color);
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+.user-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.login-btn:hover {
+    background-color: rgba(42, 82, 190, 0.1);
+}
+
+.signup-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+section {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+/* Market Overview Styles */
+.market-indices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.index-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.index-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.index-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.change {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.positive {
+    color: var(--positive-color);
+}
+
+.negative {
+    color: var(--negative-color);
+}
+
+/* Stock Search Styles */
+.search-container {
+    display: flex;
+    gap: 10px;
+}
+
+#stock-search {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#search-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+}
+
+#search-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Watchlist Styles */
+.stock-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stock-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.stock-card:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stock-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.stock-info p {
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.stock-price {
+    text-align: right;
+}
+
+.add-stock-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    display: block;
+    margin: 0 auto;
+}
+
+.add-stock-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Portfolio Summary Styles */
+.portfolio-overview {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-value {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portfolio-value h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--light-text);
+}
+
+.portfolio-value p:first-of-type {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.portfolio-chart {
+    height: 200px;
+    background-color: var(--hover-color);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-placeholder {
+    color: var(--light-text);
+    font-style: italic;
+}
+
+.view-portfolio-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    display: block;
+    margin: 0 auto;
+}
+
+.view-portfolio-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Market News Styles */
+.news-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.news-card {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    background-color: var(--hover-color);
+    transform: translateX(5px);
+}
+
+.news-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-source {
+    color: var(--light-text);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-snippet {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.read-more {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.more-news-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    display: block;
+    margin: 0 auto;
+}
+
+.more-news-btn:hover {
+    background-color: rgba(42, 82, 190, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--card-background);
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.footer-section p {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .portfolio-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .user-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .market-indices {
+        grid-template-columns: 1fr;
+    }
+
+    .stock-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}

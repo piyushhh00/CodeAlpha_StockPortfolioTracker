@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-chart-line"></i>
+            <h1>Stock Tracker</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Watchlist</a></li>
+                <li><a href="#">Market News</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="user-menu">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="market-overview">
+            <h2>Market Overview</h2>
+            <div class="market-indices">
+                <div class="index-card">
+                    <h3>S&P 500</h3>
+                    <p class="price">4,587.64</p>
+                    <p class="change positive">+0.57%</p>
+                </div>
+                <div class="index-card">
+                    <h3>Dow Jones</h3>
+                    <p class="price">35,950.89</p>
+                    <p class="change positive">+0.43%</p>
+                </div>
+                <div class="index-card">
+                    <h3>NASDAQ</h3>
+                    <p class="price">14,367.94</p>
+                    <p class="change negative">-0.12%</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stock-search">
+            <h2>Search Stocks</h2>
+            <div class="search-container">
+                <input type="text" id="stock-search" placeholder="Enter stock symbol or company name...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+
+        <section class="watchlist">
+            <h2>Your Watchlist</h2>
+            <div class="stock-list">
+                <div class="stock-card">
+                    <div class="stock-info">
+                        <h3>AAPL</h3>
+                        <p>Apple Inc.</p>
+                    </div>
+                    <div class="stock-price">
+                        <p class="price">175.84</p>
+                        <p class="change positive">+1.25%</p>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-info">
+                        <h3>MSFT</h3>
+                        <p>Microsoft Corporation</p>
+                    </div>
+                    <div class="stock-price">
+                        <p class="price">334.65</p>
+                        <p class="change positive">+0.89%</p>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-info">
+                        <h3>GOOGL</h3>
+                        <p>Alphabet Inc.</p>
+                    </div>
+                    <div class="stock-price">
+                        <p class="price">2,856.12</p>
+                        <p class="change negative">-0.32%</p>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-info">
+                        <h3>AMZN</h3>
+                        <p>Amazon.com, Inc.</p>
+                    </div>
+                    <div class="stock-price">
+                        <p class="price">3,421.57</p>
+                        <p class="change positive">+1.47%</p>
+                    </div>
+                </div>
+            </div>
+            <button class="add-stock-btn">+ Add Stock</button>
+        </section>
+
+        <section class="portfolio-summary">
+            <h2>Portfolio Summary</h2>
+            <div class="portfolio-overview">
+                <div class="portfolio-value">
+                    <h3>Total Value</h3>
+                    <p>$24,892.45</p>
+                    <p class="change positive">+$345.67 (1.4%)</p>
+                </div>
+                <div class="portfolio-chart">
+                    <!-- Chart will be rendered here using JavaScript -->
+                    <div class="chart-placeholder">Chart Loading...</div>
+                </div>
+            </div>
+            <button class="view-portfolio-btn">View Full Portfolio</button>
+        </section>
+
+        <section class="market-news">
+            <h2>Latest Market News</h2>
+            <div class="news-container">
+                <div class="news-card">
+                    <h3>Fed Signals Potential Rate Cut in Coming Months</h3>
+                    <p class="news-source">Financial Times - 2 hours ago</p>
+                    <p class="news-snippet">The Federal Reserve has indicated it may consider rate cuts as inflation pressures ease...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="news-card">
+                    <h3>Tech Stocks Rally on Strong Earnings Reports</h3>
+                    <p class="news-source">Wall Street Journal - 5 hours ago</p>
+                    <p class="news-snippet">Major technology companies exceeded analyst expectations, driving market gains...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="news-card">
+                    <h3>Oil Prices Stabilize After Recent Volatility</h3>
+                    <p class="news-source">Bloomberg - 1 day ago</p>
+                    <p class="news-snippet">Crude oil markets have found equilibrium following supply concerns and demand fluctuations...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <button class="more-news-btn">More News</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Stock Tracker</h3>
+                <p>A comprehensive tool for tracking stocks, managing portfolios, and staying updated with market trends.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Stock Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
