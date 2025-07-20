@@ -1,98 +1,43 @@
 # Stock Tracker
 
-A web application for tracking stock prices, analyzing market trends, and managing your investment portfolio.
+A simple web application that tracks stocks and calculates total investment value based on manually defined stock prices.
 
 ## Features
 
-- **Real-time Stock Data**: Get up-to-date information on stock prices
-- **Portfolio Management**: Track your investments in one place
-- **Market Analysis**: View charts and trends to make informed decisions
-- **Watchlists**: Create custom lists of stocks you're interested in
-- **Alerts**: Set notifications for price changes
+- Add stocks to your portfolio with specified quantities
+- View your portfolio with stock details and values
+- Calculate total investment value automatically
+- Save your portfolio to a text (.txt) or CSV (.csv) file
+- Clear your portfolio to start fresh
 
 ## Installation
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
-- npm or yarn
+- Python 3.6 or higher
+- pip (Python package installer)
 
 ### Setup
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/Stock-Tracker.git
-   cd Stock-Tracker
-   ```
+1. Clone or download this repository to your local machine
+2. Navigate to the project directory
 
-2. Install dependencies:
-   ```
-   npm install
-   # or
-   yarn install
-   ```
+```bash
+cd path/to/Stock-Tracker
+```
 
-3. Set up environment variables:
-   - Create a `.env` file in the root directory
-   - Add your API keys (see `.env.example` for required variables)
+3. Install the required dependencies
 
-4. Start the development server:
-   ```
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. Open your browser and navigate to `http://localhost:3000`
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
 
-### Creating an Account
+1. Start the application
 
-1. Click on the "Sign Up" button
-2. Fill in your details and create a password
-3. Verify your email address
+```bash
+python app.py
+```
 
-### Adding Stocks to Your Portfolio
-
-1. Navigate to the "Portfolio" section
-2. Click "Add Stock"
-3. Enter the stock symbol and purchase details
-4. Save your changes
-
-### Setting Up Alerts
-
-1. Go to the "Alerts" tab
-2. Click "Create New Alert"
-3. Select a stock and set your price conditions
-4. Choose your notification method
-
-## API Integration
-
-This application uses financial data APIs to provide real-time stock information. You'll need to obtain API keys from one of the following services:
-
-- [Alpha Vantage](https://www.alphavantage.co/)
-- [Yahoo Finance API](https://www.yahoofinanceapi.com/)
-- [Finnhub](https://finnhub.io/)
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Financial data provided by [Provider Name]
-- Icons from [Icon Source]
-- [Any other acknowledgments]
-
-## Contact
-
-If you have any questions or suggestions, please open an issue or contact the repository owner.
+2. Open your web browser and navigate to:

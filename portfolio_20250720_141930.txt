@@ -1,0 +1,15 @@
+Stock Portfolio
+==============
+
+Stock: NFLX
+Quantity: 10
+Price: $550
+Value: $5500
+
+Stock: AMZN
+Quantity: 5
+Price: $145
+Value: $725
+
+
+Total Investment: $6225
